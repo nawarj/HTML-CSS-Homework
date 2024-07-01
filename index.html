@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
+    <title>HTML & CSS | Homework</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <section class="first-sec" id="home">
+            <h1 id="h1">Big Heading</h1>
+            <article>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto impedit molestias, dolorum
+                    asperiores magnam eligendi sit nesciunt mollitia amet porro delectus eaque at et quis. Quae
+                    voluptatem ducimus fuga pariatur!</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="second-section" id="about-us">
+
+            <h2>About Us</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="YZY-x-Gap-Round-Jacket-Blue.jpg" alt="Image Card">
+                    <h3>third heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, in!</p>
+                </div>
+                <div class="card">
+                    <img src="YZY-x-Gap-Round-Jacket-Blue.jpg" alt="Image Card">
+                    <h3>third heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, in!</p>
+                </div>
+                <div class="card">
+                    <img src="YZY-x-Gap-Round-Jacket-Blue.jpg" alt="Image Card">
+                    <h3>third heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, in!</p>
+                </div>
+            </div>
+
+        </section>
+        <hr>
+        <section class="third-sec" id="contact-us">
+            <h2>Contact</h2>
+            <article>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto impedit molestias, dolorum
+                    asperiores magnam eligendi sit nesciunt mollitia amet porro delectus eaque at et quis. Quae
+                    voluptatem ducimus fuga pariatur!</p>
+            </article>
+            <form id="myForm">
+                <label>First Name</label>
+                <input type="text" required>
+                <label>Last Name</label>
+                <input type="text" required>
+                <label>E-mail</label>
+                <input type="email" required>
+                <label>Password</label>
+                <input type="password" id="initial" required>
+                <label>Confirm Password</label>
+                <input type="password" id="second">
+                <input type="reset" name="reset">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <footer>
+            <p>Copyright <span>&copy; 2024</span></p>
+        </footer>
+    </main>
+    <button class="toTop">top</button>
+    <script src="app.js"></script>
+</body>
+
+</html>

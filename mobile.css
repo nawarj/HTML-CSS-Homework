@@ -1,0 +1,43 @@
+section {
+    height: auto;
+}
+
+.first-sec {
+    height: 100vh;
+}
+
+.first-sec article {
+    width: 300px;
+}
+
+.first-sec article p {
+    letter-spacing: 3px;
+}
+
+/* second section */
+.second-section {
+    padding: 80px 0;
+}
+
+.cards-container {
+    flex-direction: column;
+    gap: 50px;
+}
+
+.second-section h2 {
+    margin: 0 0 35px;
+}
+
+/* third section */
+
+.third-sec {
+    height: auto;
+}
+
+.third-sec article {
+    width: 300px;
+}
+
+form {
+    width: 70%;
+}
