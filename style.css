@@ -35,10 +35,35 @@ nav ul a {
     padding: 14px 16px;
     text-align: center;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 nav ul a:hover {
     background-color: #404040;
+}
+
+.drop-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    justify-content: start;
+    flex-direction: column;
+    position: absolute;
+    top: 49px;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 14px 0;
+}
+
+.drop-container:hover .dropdown-menu {
+    display: flex;
 }
 
 section {
@@ -193,4 +218,5 @@ footer p {
     border: 3px solid #000;
     border-radius: 50%;
     font-weight: 700;
+    cursor: pointer;
 }
