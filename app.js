@@ -123,7 +123,7 @@ backToTop.addEventListener("click", () => {
     })
 })
 
-// Pressing on burger menu to open the navbar
+// Pressing on burger [ ☰ ] menu to open the navbar
 
 const icon = document.getElementById("icon")
 const ul = document.getElementsByTagName("ul")[0]
