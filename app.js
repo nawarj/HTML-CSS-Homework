@@ -34,6 +34,11 @@ button.style.cursor = 'pointer'
 button.style.backgroundColor = '#333'
 button.style.border = "none"
 
+// --------------- add attribute to BTN
+// button.setAttribute('disabled', '') 
+button.setAttribute('id', 'btn')
+
+
 // --------------- styling the reset button
 resetBtn.innerText = "Reset"
 resetBtn.style.padding = "12px 18px"
@@ -43,30 +48,12 @@ resetBtn.style.backgroundColor = 'red'
 resetBtn.style.border = "none"
 
 
-// --------------- THIS IS JUST TO EXPLAIN HOW JS WORKS 
-let toggle = false;
-
-button.addEventListener('click', () => {
-    if (toggle === false) {
-        button.style.backgroundColor = '#fff'
-        toggle = true
-        console.log('1', toggle);
-    } else {
-        button.style.backgroundColor = '#333'
-        toggle = false
-        console.log('2', toggle);
-    }
-})
-
 // --------------- [*** we can use this way to change the styles on the click ***]
 // button.addEventListener('click', () => {
 //      button.classList.toggle("CLASS-NAME")           // classList : it's mean the classes that the button has 
 // })                                                   // toggle : when we click the first time it will add the class (that we assigned before in the css file)
 //          and when we click second time it will remove the class.
 
-// --------------- add attribute to BTN
-// button.setAttribute('disabled', '') 
-button.setAttribute('id', 'btn')
 
 // --------------- Create a counter
 const counter = document.createElement("p")
@@ -84,7 +71,7 @@ counter.style.marginTop = '20px'
 // home.appendChild(resetBtn)   [*** This is the original way to append a child ***]
 // home.appendChild(counter)    [*** This is the original way to append a child ***]
 
-// --------------- function  [*** This is an example about functions ***]
+// --------------- add the elements to the section with function  [*** This is an example about functions ***]
 function addChild(parent, child) {
     parent.appendChild(child)
 }
@@ -93,20 +80,40 @@ addChild(home, button)      //[*** This is an example about functions ***]
 addChild(home, resetBtn)    //[*** This is an example about functions ***]
 addChild(home, counter)     //[*** This is an example about functions ***]
 
+// --------------- Add click event to the button
+
+
 
 button.addEventListener("click", function () { // *******
+    // --------------- THIS IS JUST TO EXPLAIN HOW JS WORKS 
+    let toggle = false;                        //      ** 
+
+    if (toggle === false) {                    //      **
+        button.style.backgroundColor = '#fff'  //      **
+        toggle = true                          //      **     
+        console.log('1', toggle);              //      ** 
+    } else {                                   //      **
+        button.style.backgroundColor = '#333'  //      **
+        toggle = false                         //      **
+        console.log('2', toggle);              //      ** 
+    }                                          //      ** 
+    // --------------- /THIS IS JUST TO EXPLAIN HOW JS WORKS 
+
+    // add 1 to the count
     count++                                    //      **
+    // update the counter with new value
     counter.innerText = `Count: ${count}`      //      **
 
     // --------------- add item "P" every click //     **
-
     // every time i click the button it will create a new element 
-    // [*** if we create the element outside the CLICK EVENT BLOCK it will be created just once ***]
+    // [*** if we create the element outside the CLICK EVENT BLOCK,
+    //  it will be created just once ***]
     const newP = document.createElement("p")   //      **
 
     // style the new element                   //      **
     newP.style.color = "#fff"                  //      **
     newP.style.fontWeight = "600"              //      **
+    // add content to the new element with updated count 
     newP.innerHTML = `item ${count}`           //      **
 
     // add the new element to the Document     //      **
@@ -114,6 +121,7 @@ button.addEventListener("click", function () { // *******
 
     // Reset button                            //      **
     resetBtn.addEventListener('click', function () {
+        // remove every new element that we create
         newP.remove()                          //      **
         // reset the count                     //      **
         count = 0                              //      **
