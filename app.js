@@ -1,29 +1,32 @@
-function chkPassword() {
-    let init = document.getElementById("initial")
-    let sec = document.getElementById("second")
-    if (init.value === "") {
-        alert("you did not enter a password")
-        init.focus();
-        return;
-    }
-    if (init.value !== sec.value) {
-        alert("The two passwords are not the same");
-        init.focus();
-        init.select();
-        return false;
-    } else
-        alert("Done!")
-}
+// --------------- THIS IS FOR EXTRA LEARNING
+// function chkPassword() {
+//     let init = document.getElementById("initial")
+//     let sec = document.getElementById("second")
+//     if (init.value === "") {
+//         alert("you did not enter a password")
+//         init.focus();
+//         return;
+//     }
+//     if (init.value !== sec.value) {
+//         alert("The two passwords are not the same");
+//         init.focus();
+//         init.select();
+//         return false;
+//     } else
+//         alert("Done!")
+// }
 
-document.getElementById("second").onblur = chkPassword;
-document.getElementById("myForm").onsubmit = chkPassword;
+// document.getElementById("second").onblur = chkPassword;
+// document.getElementById("myForm").onsubmit = chkPassword;
 
+
+// --------------- Selecting the elements
 const heading = document.getElementById("h1")
 const home = document.getElementById("home")
 const button = document.createElement("button")
 const resetBtn = document.createElement("button")
 
-// --------------- style the element
+// --------------- styling the button
 button.innerText = "Add +1"
 button.style.padding = "12px 18px"
 button.style.marginTop = "20px"
@@ -31,7 +34,7 @@ button.style.cursor = 'pointer'
 button.style.backgroundColor = '#333'
 button.style.border = "none"
 
-// --------------- style the element
+// --------------- styling the reset button
 resetBtn.innerText = "Reset"
 resetBtn.style.padding = "12px 18px"
 resetBtn.style.marginTop = "20px"
@@ -40,6 +43,7 @@ resetBtn.style.backgroundColor = 'red'
 resetBtn.style.border = "none"
 
 
+// --------------- THIS IS JUST TO EXPLAIN HOW JS WORKS 
 let toggle = false;
 
 button.addEventListener('click', () => {
@@ -53,6 +57,12 @@ button.addEventListener('click', () => {
         console.log('2', toggle);
     }
 })
+
+// --------------- [*** we can use this way to change the styles on the click ***]
+// button.addEventListener('click', () => {
+//      button.classList.toggle("CLASS-NAME")           // classList : it's mean the classes that the button has 
+// })                                                   // toggle : when we click the first time it will add the class (that we assigned before in the css file)
+//          and when we click second time it will remove the class.
 
 // --------------- add attribute to BTN
 // button.setAttribute('disabled', '') 
@@ -110,7 +120,7 @@ button.addEventListener("click", function () { // *******
         // update the reset on the Document    //      **
         counter.innerText = `Count: ${count}`  //      **
     })                                         //      **
-})                                             // *******
+})                       // *****************************
 
 
 // Back to top Button
@@ -126,14 +136,14 @@ backToTop.addEventListener("click", () => {
 // Pressing on burger [ ☰ ] menu to open the navbar
 
 const icon = document.getElementById("icon")
-const ul = document.getElementsByTagName("ul")[0]
+const ul = document.getElementsByTagName("ul")[0] // [*** I prefer to use the (getElementById) selector or (querySelector) ***]
 const items = document.getElementById("items")
-const dorpDownMenu = document.getElementsByTagName("ul")[1]
+const dorpDownMenu = document.getElementsByTagName("ul")[1] // [*** I prefer to use the (getElementById) selector or (querySelector) ***]
 
 icon.addEventListener("click", () => {
-    ul.classList.toggle("show-menu")
-})
-
+    ul.classList.toggle("show-menu")  // classList : it's mean the classes that the ul has
+})                                    // toggle : when we click the first time it will add the class (show-menu)
+//          and when we click second time it will remove the class (show-menu).
 items.addEventListener("click", () => {
     dorpDownMenu.classList.toggle("show-menu")
 })
