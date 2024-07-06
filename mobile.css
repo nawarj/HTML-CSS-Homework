@@ -1,3 +1,41 @@
+.material-symbols-outlined {
+    color: #fff;
+    display: block !important;
+    order: 1;
+    align-self: flex-end;
+}
+
+
+nav {
+    justify-content: end;
+    flex-direction: column;
+}
+
+ul {
+    display: none !important;
+    flex-direction: column;
+    order: 2;
+}
+
+ul li {
+    width: 100%;
+}
+
+.dropdown-menu {
+    display: none !important;
+    background-color: #696969;
+    top: 49px;
+}
+
+.dropdown-menu a {
+    text-align: left;
+    padding: 14px 16px;
+}
+
+.show-menu {
+    display: flex !important;
+}
+
 section {
     height: auto;
 }

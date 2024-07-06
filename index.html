@@ -7,6 +7,8 @@
     <link rel="stylesheet" media="screen" href="style.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
     <title>HTML & CSS | Homework</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -17,7 +19,10 @@
                 <li><a href="#about-us">About us</a></li>
                 <li><a href="#contact-us">Contact Us</a></li>
                 <li class="drop-container">
-                    <a href="#">items</a>
+                    <a href="#" id="items">items<span class="material-symbols-outlined arrow-down">
+                            arrow_drop_down
+                        </span></a>
+
                     <ul class="dropdown-menu">
                         <li><a href="#">item 1</a></li>
                         <li><a href="#">item 2</a></li>
@@ -26,6 +31,10 @@
 
                 </li>
             </ul>
+            <span class="material-symbols-outlined" id="icon">
+                menu
+            </span>
+
         </nav>
 
         <section class="first-sec" id="home">
